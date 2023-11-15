@@ -49,8 +49,11 @@
         </section>
         <!-- About seksjon -->
         <section class="about">
+            <img src="https://placehold.jp/400x400.png" alt="Placeholder">
             <h2>About Our Company</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur"</p>
             <a href="about.html" class="btn">Read more about us</a>
         </section>
         
@@ -58,30 +61,29 @@
         <section class="services">
             <h2>Our Services</h2>
             <article>
-                <img src="development-icon.png" alt="Development">
+                <i class="fa-solid fa-people-group"></i>
                 <h3>Branding</h3>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
             </article>
             <article>
-                <img src="development-icon.png" alt="Development">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
                 <h3>Branding</h3>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
             </article>
             <article>
-                <img src="development-icon.png" alt="Development">
+                <i class="fa-solid fa-code"></i>
                 <h3>Branding</h3>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
             </article>
             <article>
-                <img src="development-icon.png" alt="Development">
+                <i class="fa-solid fa-wifi"></i>
                 <h3>Branding</h3>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
             </article>
         </section>
         <!-- Newsletter seksjon -->
-        <section class="Newsletter">
-            <h2>Newsletter</h2>
-            <p>Sign up for our newsletter</p>
+        <section class="newsletter">
+            <h2>Sign up for our newsletter</h2>
             <form action="subscribe-endpoint" method="post">
                 <input type="email" name="email" placeholder="Your email">
                 <button type="submit">Sign me up!</button>
@@ -92,15 +94,45 @@
 
     <!-- Footer seksjon -->
     <footer>
-        <p>&copy; Companyname 2023</p>
-        <a href="https://facebook.com">Facebook</a>
-        <a href="https://instagram.com">Instagram</a>
-        <a href="https://linkedin.com">LinkedIn</a>
+        <img src="img/logo1.png" alt="Company Logo">
+        <p>&copy; Companyrights Companyname 2023</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" class="icon" aria-label="Facebook">
+                <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="https://instagram.com" class="icon" aria-label="Instagram">
+                <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" class="icon" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
     </footer>
 
     <!-- Back to Top Button (Optional) -->
     <a href="#top" class="back-to-top">Back to Top</a>
 
+    <!-- Script seksjon -->
+    <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("back-to-top").style.display = "block";
+            } else {
+                document.getElementById("back-to-top").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        document.getElementById("back-to-top").onclick = function () {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        };
+    </script>
 </body>
 </html>
 
