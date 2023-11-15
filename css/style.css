@@ -1,0 +1,175 @@
+/* styles.css */
+
+/* Base styles for the header */
+header {
+    background: #ffffff;
+    /* Replace with your desired color or add a background image */
+    color: #fff;
+    padding: 1em 0;
+}
+
+#logo img{
+    width: 100px;
+    height: auto;
+
+}
+/* Styles for the navigation bar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    /* This will space out the logo and menu items */
+    align-items: center;
+}
+
+/* If you want the logo to be exactly centered regardless of the menu items */
+nav::before,
+nav::after {
+    content: '';
+    flex: 1;
+}
+
+/* Style for navigation links */
+nav a {
+    color: #000000;
+    /* Replace with your desired color */
+    text-decoration: none;
+    font-weight: 400;
+    padding: 0.5em 1em;
+    transition: color 0.3s ease;
+}
+
+
+/* Special style for the contact button */
+nav a.contact-button {
+    background-color: #e6bd43;
+    /* Yellow background for the 'Contact' button */
+    color: #000000;
+    /* White text for the 'Contact' button */
+    border-radius: 4px;
+    /* Rounded corners for the button */
+    font-weight: bold;
+}
+/* Hover effect for the contact button */
+nav a.contact-button:hover {
+    background-color: #000000; /* White background on hover */
+    color: #FFD700; /* Yellow text on hover */
+    border: 2px solid #FFD700; /* Yellow border to maintain size */
+}
+/* Logo specific style if needed */
+
+/* Navigation link active state styles */
+nav a.active {
+    font-weight: bold;
+    border-bottom: 3px solid #e6bd43; /* Gold underline */
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    text-align: center;
+    color: #000000;
+    padding: 40px 20px;
+}
+
+/* Pseudo-element for background image with adjusted opacity */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/home/pen-4337521_1280.jpg') no-repeat center center / cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Content inside hero section */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* Headline styles */
+.hero h1 {
+    margin-bottom: 20px;
+    /* Space between headline and subheadline */
+    font-size: 2em;
+    /* Large text for the headline */
+    /* Add more styling as needed */
+}
+
+/* Subheadline styles */
+.hero p {
+    margin-bottom: 30px;
+    /* Space between subheadline and button */
+    /* Add more styling as needed */
+}
+
+/* Button styles */
+.hero .btn {
+    background-color: #e6bd43;
+    /* Yellow background for the button */
+    color: #000000;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border: none;
+    /* No border */
+    font-weight: bold;
+    /* Make the text bold */
+    text-transform: uppercase;
+    /* Uppercase text */
+    cursor: pointer;
+    /* Cursor to pointer to indicate it's clickable */
+    text-decoration: none;
+    /* Remove underline from text */
+    display: inline-block;
+    /* Allow width and height */
+    transition: background-color 0.3s ease;
+    /* Transition for hover effect */
+}
+
+/* Subheading Section Styles */
+.subheading {
+    background-color: #ffffff;
+    /* or any other color you want for the background */
+    padding: 20px;
+    /* Adjust the padding as needed */
+    text-align: center;
+    /* Center the text */
+    margin: 10px;
+}
+
+.subheading h2 {
+    font-size: 24px;
+    font-weight: bold;
+    /* Adjust the font-size as needed */
+    color: #000000;
+    /* Dark text color, adjust as needed */
+    margin-bottom: 15px;
+    /* Space between the heading and paragraph */
+}
+
+.subheading p {
+    font-size: 16px;
+    /* Adjust the font-size as needed */
+    color: #000000;
+    /* Lighter text color, adjust as needed */
+    margin: 20px;
+    /* Remove default margin */
+    /* Include any additional styling such as line-height for better readability */
+}
+
+/* Responsive menu (optional for mobile view) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 0.5em;
+    }
+}
