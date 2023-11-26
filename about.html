@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- "Head" seksjonen, inneholder metadata, koblinger til stylesheet og komponenter som FontAwsome -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Home page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company name - Home</title>
+    <!-- Link til normalize.css-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+    <!--Linker til Font Awsome-ikonstilene for UI-elementer-->
+    <link href="css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+    <link href="css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- "Body" seksjonen, inneholder innholdet på siden -->
+    <header>
+        <!-- "Header" seksjonen-->
+        <nav class="nav">
+            <a href="index.html" id="logo">
+                <img src="img/logo1.png" alt="Company Logo">
+            </a>
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html" class="active">About</a>
+            <!-- 'Contact' button med spesiell klasse for design -->
+            <a href="#" class="contact-button">Contact</a>
+
+        </nav>
+    </header>
+
+
+
+
+display: flex;
+/* Display the image as a block element */
+margin-left: auto;
+/* Center the image */
+margin-right: auto;
+/* Center the image */
+width: 100%;
+/* Responsive image width */
+max-width: 400px;
+/* Maximum size of the image */
+height: auto;
+/* Maintain aspect ratio */
+margin-bottom: 20px;
+/* Space below the image */

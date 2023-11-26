@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- "Head" seksjonen, inneholder metadata, koblinger til stylesheet og komponenter som FontAwsome -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Home page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company name - Home</title>
+    <!-- Link til normalize.css-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+    <!--Linker til Font Awsome-ikonstilene for UI-elementer-->
+    <link href="css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+    <link href="css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+
+</body>
+    <!-- "Body" seksjonen, inneholder innholdet på siden -->
+    <header>
+        <!-- "Header" seksjonen-->
+        <nav class="nav">
+            <a href="index.html" id="logo">
+                <img src="img/logo1.png" alt="Company Logo">
+            </a>
+            <a href="index.html">Home</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="about.html">About</a>
+            <!-- 'Contact' button med spesiell klasse for design -->
+            <a href="#" class="contact-button">Contact</a>
+        </nav>
+    </header>
+    <!-- "Main" seksjonen-->
+    <main>
+        <!-- Banner for protfolio-->
+        <section class="hero portfolio-hero">
+            <h1>Portfolio</h1>
+        </section>
+        <section class="jobs-section">
+            <h2 class="job-title">Explore previous jobs</h2>
+            <div class="job-categories">
+                <button type="button">Branding</button>
+                <button type="button">Design</button>
+                <button type="button">Development</button>
+            </div>
+        </section>
+        <section class="branding">
+            <h2 class="branding-title">Branding</h2>
+            <article class="branding-item">
+                <img src="https://placehold.jp/400x400.png" alt="Placeholder">
+                <p>Et harum quidem</p>
+            </article>
+            <article class="branding-item">
+                <img src="https://placehold.jp/400x400.png" alt="Placeholder">
+                <p>Et harum quidem</p>
+            </article>
+            <article class="branding-item">
+                <img src="https://placehold.jp/400x400.png" alt="Placeholder">
+                <p>Et harum quidem</p>
+            </article>
+            <article class="branding-item">
+                <img src="https://placehold.jp/400x400.png" alt="Placeholder">
+                <p>Et harum quidem</p>
+            </article>
+        </section>
+        <section class="design">
+            <h2 class="design-title">Design</h2>
+            <article class="design-item">
+                <img src="https://placehold.jp/400x400.png" alt="Placeholder">
+                <p>Et harum quidem</p>
+            </article>
+            <article class="design-item">
+                <img src="https://placehold.jp/400x400.png" alt="Placeholder">
+                <p>Et harum quidem</p>
+            </article>
+            <article class="design-item">
+                <img src="https://placehold.jp/400x400.png" alt="Placeholder">
+                <p>Et harum quidem</p>
+            </article>
+        </section>
+        <section class="development">
+            <h2 class="development-title">Development</h2>
+            <article class="development-item">
+                <img src="https://placehold.jp/400x400.png" alt="Placeholder">
+                <p>Et harum quidem</p>
+            </article>
+            <article class="development-item">
+                <img src="https://placehold.jp/400x400.png" alt="Placeholder">
+                <p>Et harum quidem</p>
+            </article>
+        </section>
+    </main>
+    
+    <!-- Footer seksjon -->
+    <footer>
+        <img src="img/logo1.png" alt="Company Logo">
+        <p>&copy; Companyrights Companyname 2023</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" class="icon" aria-label="Facebook">
+                <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="https://instagram.com" class="icon" aria-label="Instagram">
+                <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" class="icon" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Scroll back to top">↑</a>
+
+    <!-- JavaScript to show/hide the back to top button -->
+    <script>
+        // When the user scrolls down 100px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            var backToTopButton = document.querySelector(".back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        // Optional: Smooth scroll to top when clicking on the button
+        document.querySelector('.back-to-top').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
