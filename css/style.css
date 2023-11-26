@@ -426,6 +426,65 @@ nav a.active {
     margin-right: auto;
 }
 
+/* About seksjon styles */
+
+/* Banner Section Styles */
+.about-banner {
+    background-image: url(../img/home/pen-4337521_1280.jpg);
+    background-size: cover;
+    padding: 40px 20px;
+    /* Adjust padding as needed */
+    color: #fff;
+    /* Adjust text color as needed */
+    position: relative;
+    /* For overlay positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-banner{
+    text-align: center;
+    color: #000000;
+}
+
+.about-banner-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.about-banner h1 {
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+
+.about-banner h1,
+.about-banner h2,
+.about-banner p {
+    text-align: left;
+    color: #000000;
+    margin: 0 auto 20px;
+    width: 60%;
+}
+
+/* Button styles */
+.about-banner .btn {
+    background-color: #e6bd43;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+
+}
+
+
 /* Footer Section Styles */
 footer {
     background-color: #333;
@@ -446,9 +505,6 @@ footer a {
     text-decoration: none;
     
 }
-
- padding-right: 180px;
- padding-left: -180px;
 
 /* Social Media Icons - assuming you are using Font Awesome or similar */
 footer .social-icons {
