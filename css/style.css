@@ -351,12 +351,12 @@ nav a.active {
     font-size: 24px;
 }
 
-/* Golden underline for the title, adjust width as needed */
+
 .design-title::after {
     content: '';
     display: block;
     width: 100%;
-    /* Example width, adjust as needed */
+    
     height: 3px;
     background-color: #e6bd43;
     margin: 0 auto;
@@ -365,9 +365,9 @@ nav a.active {
 
 .designment-item {
     width: 100%;
-    /* Full width on mobile */
+    
     margin-bottom: 40px;
-    /* Space between items */
+   
 }
 
 .design-item img {
@@ -394,8 +394,6 @@ nav a.active {
     margin-bottom: 20px;
     font-size: 24px;
 }
-
-/* Golden underline for the title, adjust width as needed */
 .development-title::after {
     content: '';
     display: block;
@@ -433,11 +431,8 @@ nav a.active {
     background-image: url(../img/home/pen-4337521_1280.jpg);
     background-size: cover;
     padding: 40px 20px;
-    /* Adjust padding as needed */
     color: #fff;
-    /* Adjust text color as needed */
     position: relative;
-    /* For overlay positioning */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -485,6 +480,103 @@ nav a.active {
 }
 
 
+/* Our clients seksjon */
+.clients-section {
+    background-color: #e6bd43;
+    text-align: center;
+    padding: 20px;
+}
+
+.clients-section h2 {
+    color: #000;
+    margin-bottom: 30px;
+    font-size: large;
+}
+
+.clients-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.logo {
+    width: calc(50% - 40px);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.center-logo {
+    width: 50% - 40px;
+    justify-content: center;
+    display: flex;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* contact us seksjon for about.html */
+.contact-us,
+.contact-information {
+    background-color: #f3f3f3;
+    color: #000000;
+    padding: 20px;
+    text-align: left;
+}
+
+.contact-us h2{
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+}
+.contact-us h2,
+.contact-information h3 {
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+#message {
+    height: 100px;
+}
+#contact-form input,
+#contact-form textarea {
+    width: calc(100% - 20px); /*Justerer bredden på input-feltene */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ffffff;
+}
+
+#contact-form button.send-message {
+    background-color: #e6bd43;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-information i{
+    margin-right: 10px;
+}
+.contact-information p {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Google Maps Integrasjon*/
+
+.map-section iframe {
+    width: 100%;
+    height: 250px;
+}
+
 /* Footer Section Styles */
 footer {
     background-color: #333;
@@ -530,7 +622,7 @@ footer .social-icons li {
     padding: 10px 15px;
     border-radius: 2px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 24px;
     display: none;
     z-index: 1000;
 }
