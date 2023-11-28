@@ -1,26 +1,26 @@
 /* styles.css */
+body{
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
 
-/* Global Styles */
+/* Mobile styles */
 
 /* Definerer et grid-container som inneholder header, main og footer */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    /* 1 equal column for mobile */
-    /* If you need a specific max width or want to center the grid container: */
     max-width: 1600px;
-    /* Or whatever max width you prefer */
     margin: 0 auto;
-    /* Center the container */
+    
 }
 
-/* Ensuring header and footer span all columns */
 header, main, footer {
     grid-column: 1 / -1;
 }
 
 
-/* Base styles for the header */
+/* Base styles for header */
 header {
     background: #ffffff;
     color: #fff;
@@ -72,6 +72,13 @@ nav a.active {
 }
 
 /* Hero Section Styles */
+
+#hero-video{
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
 .hero {
     position: relative;
     text-align: center;
@@ -262,7 +269,7 @@ nav a.active {
     font-weight: bold;
     border: none; 
     cursor: pointer; 
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 /* Portfolio seksjon */
@@ -380,9 +387,7 @@ nav a.active {
 
 .designment-item {
     width: 100%;
-    
     margin-bottom: 40px;
-   
 }
 
 .design-item img {
@@ -441,7 +446,7 @@ nav a.active {
 
 /* About seksjon styles */
 
-/* Banner Section Styles */
+/* Banner seksjon Styles */
 .about-banner {
     background-image: url(../img/home/pen-4337521_1280.jpg);
     background-size: cover;
@@ -613,7 +618,6 @@ footer a {
     
 }
 
-/* Social Media Icons - assuming you are using Font Awesome or similar */
 footer .social-icons {
     font-size: 1.5em;
     display: flex;
@@ -642,24 +646,134 @@ footer .social-icons li {
     z-index: 1000;
 }
 
+.services {
+    text-align: center;
+    padding: 20px;
+}
+
+.services h2 {
+    margin-bottom: 30px;
+}
+
+
+.services article {
+    margin-bottom: 20px;
+    
+}
+
+/* Medium screens: 2 columns for articles */
+@media (min-width: 450px) {
+    .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        grid-gap: 20px;
+        
+    }
+
+    .services h2 {
+        grid-column: 1 / -1;
+        
+    }
+    
+    .newsletter {
+        padding: 50px 0;
+        
+    }
+    
+    .newsletter h2 {
+        font-size: 2.5em;
+    }
+    
+    .newsletter form {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        max-width: 400px;
+        margin: 0 auto;
+        
+    }
+    
+    .newsletter input[type="email"] {
+        flex-grow: 0;
+        width: 60%;
+        margin-right: 10px;
+    }
+    
+    .newsletter button {
+        flex-grow: 0;
+        width: auto;
+        padding: 10px 20px;
+        background-color: #e6bd43;
+        color: #000;
+        border: none;
+        border-radius: 0;
+    }
+    
+}
+
+/* Large screens: 3 columns with the last item centered */
+@media (min-width: 700px) and (max-width: 1023px){
+    .services {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        
+    }
+    .services article:last-child {
+    grid-column: 2 / span 1;
+    justify-self: center;
+    }
+
+    /* Footer seksjon styles for responsivt desktop design*/
+    footer {
+        background-color: #000000;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 20px;
+        gap: 10px; 
+    }
+
+    footer p {
+        grid-column: 2 / 3; 
+        justify-self: center;
+        margin: 0; 
+        font-size: 0.9em; 
+    }
+
+    footer .social-icons {
+        display: flex;
+        justify-content: center; 
+        list-style-type: none;
+        padding: 0;
+        gap: 20px; 
+        font-size: 1.5em;
+        grid-column: 3 / 4; 
+    }
+
+    footer .back-to-top {
+        justify-self: end; 
+        grid-column: 3 / 4; 
+    }
+    
+}
 
 /* Media Query for Desktop */
 @media (min-width: 1024px) {
     /* Definerer et grid-container som inneholder header, main og footer */
     .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns for desktop */
-    /* If you need a specific max width or want to center the grid container: */
-    max-width: 1600px; /* Or whatever max width you prefer */
-    margin: 0 auto; /* Center the container */
+    grid-template-columns: repeat(3, 1fr); 
+    
+    max-width: 1600px; 
+    margin: 0 auto; 
     }
 
-     /* Ensuring header and footer span all columns */
     header, main, footer {
         grid-column: 1 / -1;
     }
 
-    /* Style other sections as needed */
     .nav {
         flex-direction: row;
         justify-content:flex-start;
@@ -669,7 +783,154 @@ footer .social-icons li {
 
     .nav #logo {
         margin-right: auto;
+        }
+
+    .hero {
+        position: relative;
+        overflow: hidden;
+        height: 300px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
+    /* Hide the pseudo-element background image on desktop */
+    .hero::before {
+        content: none; 
+    }
+
+    #hero-video {
+        display: block;
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1; 
+    }
+
+    .hero h1, .hero p, .hero .btn {
+        color: #000000; 
+    }
+
+    /* Endringer for style subheading seksjonen for desktop design */
     
-}
+    .subheading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        background-color: #ffffff;
+        padding: 20px; 
+        text-align: center; 
+        margin: 10px;
+    }
+
+    .subheading h2 {
+        width: 50%;
+        font-size: 30px;
+        font-weight: bold;
+        color: #000000;
+        margin-bottom: 15px;
+        
+    }
+
+    .subheading p {
+        width: 53%;
+        font-size: 16px;
+        color: #000000;
+        margin: 20px;
+        
+    }
+    /* Endringer for style about seksjonen for desktop design */
+    .about {
+        display: flex;   
+        justify-content: space-between;   
+        align-items: center;
+        height: 400px;  
+        background-color: #e6bd43;    
+        padding: 20px;
+    }
+    
+    .about img {
+        flex: 0 0 auto; 
+        margin-right: 20px;
+        max-width: 400px;
+        height: auto;   
+    }
+    
+        .about-text-wrapper {     
+        flex-grow: 1;
+        align-items: flex-start;   
+        text-align: left;
+        padding: 0 20px;
+    }
+        
+    .about h2 {
+        font-size: 2em;
+        text-align: left;
+    }
+    
+    .about-text-wrapper p {
+        align-items: left;
+        margin-left: 0;
+        width: 80%;
+    }
+    
+    .about .btn {
+        margin: 20px 0;
+    }
+    
+    .btn-wrapper {
+        text-align: right;  
+        padding-top: 20px;
+    }
+
+    /* Endringer for style services seksjonen for desktop design */
+    /* Extra large screens: 4 columns */
+    .services {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Footer seksjon styles for responsivt desktop design*/
+    footer {
+        background-color: #000000;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 20px;
+        gap: 10px; 
+    }
+
+    footer p {
+        grid-column: 2 / 3; 
+        justify-self: center;
+        margin: 0; 
+        font-size: 0.9em; 
+    }
+
+    footer .social-icons {
+        display: flex;
+        justify-content: center; 
+        list-style-type: none;
+        padding: 0;
+        gap: 20px; 
+        font-size: 1.5em;
+        grid-column: 3 / 4;
+
+    footer .back-to-top {
+        justify-self: end; 
+        grid-column: 3 / 4; 
+    } 
+    
+    
+}   

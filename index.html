@@ -9,6 +9,10 @@
     <!-- Link til normalize.css-->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
     <!--Linker til Font Awsome-ikonstilene for UI-elementer-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
     <link href="css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
     <link href="css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
     <link href="css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
@@ -30,14 +34,17 @@
             <a href="#" class="contact-button">Contact</a>
         </nav>
     </header>
+    <!-- "Main" seksjonen-->
     <main>
-        <!-- "Main" seksjonen-->
         <section class="hero">
+            <video id="hero-video" loop autoplay muted>
+                <source src="img/mountains.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="hero-content">
                 <h1>Compelling headline</h1>
                 <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
-                corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
-                officia deserunt mollitia animi, id est laborum et dolorum fuga</p>
+                corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
                 <a href="#" class="btn">Read more about our services</a>
             </div>
         </section>
@@ -45,18 +52,19 @@
         <section class="subheading">
             <h2>Engaging Subheading. What can you help your visitors with</h2>
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
-            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,</p>
+            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
         </section>
         <!-- About seksjon -->
         <section class="about">
             <img src="https://placehold.jp/400x400.png" alt="Placeholder">
-            <h2>About Our Company</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur"</p>
-            <a href="about.html" class="btn">Read more about us</a>
+            <div class="about-text-wrapper">
+                <h2>About Our Company</h2>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur"</p>
+                <a href="about.html" class="btn">Read more about us</a>
+            </div>    
         </section>
-        
         <!-- Services seksjon -->
         <section class="services">
             <h2>Our Services</h2>
@@ -75,7 +83,7 @@
                 <h3>Branding</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
             </article>
-            <article>
+            <article class="service-item last-item">
                 <i class="fa-solid fa-wifi"></i>
                 <h3>Branding</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
