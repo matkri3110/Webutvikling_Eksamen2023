@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
+    <div class="grid-container">
     <!-- "Body" seksjonen, inneholder innholdet på siden -->
     <header>
         <!-- "Header" seksjonen-->
@@ -27,7 +28,6 @@
             <a href="about.html">About</a>
             <!-- 'Contact' button med spesiell klasse for design -->
             <a href="#" class="contact-button">Contact</a>
-
         </nav>
     </header>
     <main>
@@ -111,28 +111,29 @@
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" aria-label="Scroll back to top">↑</a>
 
-    <!-- JavaScript to show/hide the back to top button. Provided by ChatGPT by prompt --> 
-    <script>
-        // When the user scrolls down 100px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction();
-        };
+        <!-- JavaScript to show/hide the back to top button. Provided by ChatGPT by prompt --> 
+        <script>
+            // When the user scrolls down 100px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction();
+            };
 
-        function scrollFunction() {
-            var backToTopButton = document.querySelector(".back-to-top");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
+            function scrollFunction() {
+                var backToTopButton = document.querySelector(".back-to-top");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
             }
-        }
 
-        // Optional: Smooth scroll to top when clicking on the button
-        document.querySelector('.back-to-top').addEventListener('click', function (e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
+            // Optional: Smooth scroll to top when clicking on the button
+            document.querySelector('.back-to-top').addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        </script>
+    </div>
 </body>
 </html>
 

@@ -1,5 +1,25 @@
 /* styles.css */
 
+/* Global Styles */
+
+/* Definerer et grid-container som inneholder header, main og footer */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* 1 equal column for mobile */
+    /* If you need a specific max width or want to center the grid container: */
+    max-width: 1600px;
+    /* Or whatever max width you prefer */
+    margin: 0 auto;
+    /* Center the container */
+}
+
+/* Ensuring header and footer span all columns */
+header, main, footer {
+    grid-column: 1 / -1;
+}
+
+
 /* Base styles for the header */
 header {
     background: #ffffff;
@@ -17,13 +37,8 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-
-nav::before,
-nav::after {
-    content: '';
-    flex: 1;
+    flex-direction: column;
+    padding: 0.5em;
 }
 
 /* Style for navigation links */
@@ -626,15 +641,35 @@ footer .social-icons li {
     display: none;
     z-index: 1000;
 }
-/* Responsive menu (optional for mobile view) */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
+
+
+/* Media Query for Desktop */
+@media (min-width: 1024px) {
+    /* Definerer et grid-container som inneholder header, main og footer */
+    .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns for desktop */
+    /* If you need a specific max width or want to center the grid container: */
+    max-width: 1600px; /* Or whatever max width you prefer */
+    margin: 0 auto; /* Center the container */
     }
 
-    nav a {
-        padding: 0.5em;
+     /* Ensuring header and footer span all columns */
+    header, main, footer {
+        grid-column: 1 / -1;
     }
+
+    /* Style other sections as needed */
+    .nav {
+        flex-direction: row;
+        justify-content:flex-start;
+        align-items: center;
+        padding: 20px 40px;
+    }
+
+    .nav #logo {
+        margin-right: auto;
+    }
+
+    
 }
-
-
