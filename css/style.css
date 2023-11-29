@@ -12,26 +12,30 @@ body{
     grid-template-columns: repeat(1, 1fr);
     max-width: 1600px;
     margin: 0 auto;
-    
+    /* Setter opp en grid-container med en kolonne og maks bredde på 1600px */
 }
 
-header, main, footer {
+header,
+main,
+footer {
     grid-column: 1 / -1;
+    /* Plasserer header, main og footer til å spenne over hele bredden av grid-kolonnen */
 }
-
 
 /* Base styles for header */
 header {
     background: #ffffff;
     color: #fff;
     padding: 1em 0;
+    /* Grunnleggende stiler for header, inkludert bakgrunn, tekstfarge og padding */
 }
 
-#logo img{
+#logo img {
     width: 100px;
     height: auto;
-
+    /* Stil for logo-bildet med fast bredde og automatisk høyde */
 }
+
 /* Styles for the navigation bar */
 nav {
     display: flex;
@@ -39,6 +43,7 @@ nav {
     align-items: center;
     flex-direction: column;
     padding: 0.5em;
+    /* Stiler for navigasjonsbaren, inkludert flexbox-layout */
 }
 
 /* Style for navigation links */
@@ -48,35 +53,41 @@ nav a {
     font-weight: 400;
     padding: 0.5em 1em;
     transition: color 0.3s ease;
+    /* Stil for navigasjonslenker, inkludert farge, tekstdekorasjon, fontvekt, padding og overgangseffekt */
 }
-
 
 /* Special style for the contact button */
 nav a.contact-button {
     background-color: #e6bd43;
     color: #000000;
-    border-radius: 4px; 
+    border-radius: 4px;
     font-weight: bold;
+    /* Spesiell stil for kontakt-knappen med bakgrunnsfarge, tekstfarge, kant-radius og fontvekt */
 }
+
 /* Hover effect for the contact button */
 nav a.contact-button:hover {
-    background-color: #000000; 
-    color: #FFD700; 
-    border: 2px solid #FFD700; 
+    background-color: #000000;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    /* Hover-effekt for kontakt-knappen med endringer i bakgrunns- og tekstfarge samt kantstil */
 }
 
 /* Navigation link active state styles */
 nav a.active {
     font-weight: bold;
-    border-bottom: 3px solid #e6bd43; /* Gold underline */
+    border-bottom: 3px solid #e6bd43;
+    /* Gold underline */
+    /* Stil for aktive navigasjonslenker med fontvekt og gullfarget understrekning */
 }
 
 /* Hero Section Styles */
 
-#hero-video{
+#hero-video {
     display: none;
     width: 100%;
     height: auto;
+    /* Stil for hero-video, standard skjult, med full bredde og automatisk høyde */
 }
 
 .hero {
@@ -84,10 +95,12 @@ nav a.active {
     text-align: center;
     color: #000000;
     padding: 40px 20px;
+    /* Stil for hero-seksjonen, inkludert posisjon, tekstjustering, farge og padding */
 }
 
-/* Pseudo-element for background image with adjusted opacity */
-.hero::before, .portfolio-hero::before {
+/* Pseudo-element for bakgrunnsbilde med justert gjennomsiktighet */
+.hero::before,
+.portfolio-hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -97,48 +110,50 @@ nav a.active {
     background: url('../img/home/pen-4337521_1280.jpg') no-repeat center center / cover;
     opacity: 0.5;
     z-index: -1;
+    /* Oppretter et pseudo-element for hero og portfolio-hero seksjonene med bakgrunnsbilde og gjennomsiktighet */
 }
 
-/* Content inside hero section */
+/* Innholdet inne i hero-seksjonen */
 .hero-content {
     position: relative;
     z-index: 1;
+    /* Posisjonerer innholdet over bakgrunnsbildet */
 }
 
-
-
-/* Headline styles */
+/* Overskriftsstiler */
 .hero h1 {
     margin-bottom: 20px;
     font-size: 2em;
+    /* Stil for hovedoverskriften i hero-seksjonen */
 }
 
-/* Subheadline styles */
+/* Underoverskriftsstiler */
 .hero p {
     margin-bottom: 30px;
-    
+    /* Stil for underoverskriften i hero-seksjonen */
 }
 
-/* Button styles */
+/* Knappstiler */
 .hero .btn {
-    background-color: #e6bd43; 
+    background-color: #e6bd43;
     color: #000000;
-    padding: 10px 20px; 
-    border: none; 
+    padding: 10px 20px;
+    border: none;
     font-weight: bold;
-    cursor: pointer; 
-    text-decoration: none; 
+    cursor: pointer;
+    text-decoration: none;
     display: inline-block;
     transition: background-color 0.3s ease;
-    
+    /* Stil for knappene i hero-seksjonen, inkludert bakgrunnsfarge og overgangseffekt */
 }
 
-/* Subheading Section Styles */
+/* Stiler for underoverskrift-seksjonen */
 .subheading {
     background-color: #ffffff;
-    padding: 20px; 
-    text-align: center; 
+    padding: 20px;
+    text-align: center;
     margin: 10px;
+    /* Grunnleggende stil for underoverskrift-seksjonen */
 }
 
 .subheading h2 {
@@ -146,38 +161,39 @@ nav a.active {
     font-weight: bold;
     color: #000000;
     margin-bottom: 15px;
-    
+    /* Stil for overskriften i underoverskrift-seksjonen */
 }
 
 .subheading p {
     font-size: 16px;
     color: #000000;
     margin: 20px;
-    
+    /* Stil for tekst i underoverskrift-seksjonen */
 }
 
-/* About Section Styles */
+/* Stiler for Om-seksjonen */
 .about {
     text-align: center;
     padding: 20px;
     background-color: #e6bd43
-    
+        /* Grunnleggende stil for Om-seksjonen, inkludert tekstjustering og bakgrunnsfarge */
 }
 
 .about h2 {
-    color: #000000; 
+    color: #000000;
     margin-bottom: 15px;
-    
+    /* Stil for overskriften i Om-seksjonen */
 }
 
 .about p {
-    color: #000000; 
+    color: #000000;
     margin-bottom: 20px;
     margin: 20px;
     margin-bottom: 20px;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    /* Stil for tekst i Om-seksjonen, inkludert farge, margin og bredde */
 }
 
 .about .btn {
@@ -192,41 +208,44 @@ nav a.active {
     display: inline-block;
     transition: background-color 0.3s ease;
     margin-bottom: 40px;
+    /* Stil for knappene i Om-seksjonen */
 }
 
 .about img {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 100%; 
-    max-width: 400px;   
-    height: auto;   
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     margin-top: 5px;
     margin-bottom: 20px;
-    
+    /* Stil for bilder i Om-seksjonen */
 }
 
-/* Services Section Styles */
+/* Stiler for Tjenester-seksjonen */
 .services {
     text-align: center;
     padding: 20px;
     background-color: #ffffff;
-    
+    /* Sentrerer tekst, legger til padding og setter bakgrunnsfarge for Tjenester-seksjonen */
 }
 
 .services h2 {
     margin-bottom: 20px;
-
+    /* Stil for overskriften i Tjenester-seksjonen med margin på bunnen */
 }
+
 .services i {
     max-width: 100px;
     margin-bottom: 10px;
     font-size: 2em;
+    /* Stil for ikoner i Tjenester-seksjonen, inkludert maks bredde, margin og fontstørrelse */
 }
 
 .services h3 {
     margin-bottom: 5px;
-    
+    /* Stil for underoverskrifter i Tjenester-seksjonen med liten margin på bunnen */
 }
 
 .services p {
@@ -234,71 +253,78 @@ nav a.active {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    /* Stil for paragrafer i Tjenester-seksjonen, sentrert med margin */
 }
 
-/* Newsletter Section Styles */
+/* Stiler for Nyhetsbrev-seksjonen */
 .newsletter {
-    background-color: #f8f8f8; 
+    background-color: #f8f8f8;
     padding: 20px;
     text-align: center;
+    /* Setter bakgrunnsfarge, padding og tekstjustering for Nyhetsbrev-seksjonen */
 }
 
 .newsletter h2 {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
+    /* Stil for overskriften i Nyhetsbrev-seksjonen med margin */
 }
 
-/* Newsletter Form Styles */
+/* Stiler for Nyhetsbrev-skjema */
 .newsletter form {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Bruker flexbox for å ordne elementer i Nyhetsbrev-skjemaet */
 }
 
 .newsletter input[type="email"] {
-    flex-grow: 1; 
+    flex-grow: 1;
     padding: 10px;
     border: 1px solid #cccccc;
     font-size: 1em;
-    margin-right: 10px; 
+    margin-right: 10px;
+    /* Stil for e-postfeltet i Nyhetsbrev-skjemaet */
 }
 
 .newsletter button {
-    padding: 10px 10px; 
-    background-color: #e6bd43; 
-    color: rgb(0, 0, 0); 
+    padding: 10px 10px;
+    background-color: #e6bd43;
+    color: rgb(0, 0, 0);
     font-weight: bold;
-    border: none; 
-    cursor: pointer; 
+    border: none;
+    cursor: pointer;
     font-size: 0.8em;
+    /* Stil for knappen i Nyhetsbrev-skjemaet */
 }
 
-/* Portfolio seksjon */
-
-.portfolio-hero{
+/* Portfolio-seksjon */
+.portfolio-hero {
     min-height: 300px;
     height: 25vh;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    /* Stil for Portfolio-hero-seksjonen, inkludert høyde og flexbox-oppsett */
 }
 
-/* Jobs seksjon */
-.jobs-section{
+/* Stiler for Jobber-seksjonen */
+.jobs-section {
     text-align: left;
     padding: 40px;
     margin-bottom: -80px;
+    /* Setter tekstjustering, padding og margin for Jobber-seksjonen */
 }
 
-.job-categories{
+.job-categories {
     display: flex;
     justify-content: left;
-    gap: 10px; 
+    gap: 10px;
     flex-wrap: wrap;
+    /* Bruker flexbox for å vise jobbkategorier med et mellomrom og omsluttende oppførsel */
 }
 
-/* Golden underline for the title */
+/* Gullfarget understrekning for tittelen */
 .job-title::after {
     content: '';
     display: block;
@@ -307,28 +333,33 @@ nav a.active {
     background-color: #e6bd43;
     margin: 0 auto;
     margin-top: 10px;
-    
+    /* Legger til en gullfarget linje under jobbtitlene */
 }
 
-.job-categories button{
+/* Stiler for knapper i Jobbkategorier-seksjonen */
+.job-categories button {
     padding: 10px 20px;
     border: 1px solid black;
     background: none;
-    cursor: pointer;   
+    cursor: pointer;
+    /* Stil for knapper i jobbkategorier med padding, kant og peker som peker */
 }
 
-/* Branding seksjon */
+/* Branding-seksjonen */
 .branding {
     text-align: left;
     padding: 40px;
     margin-bottom: -100px;
+    /* Setter tekstjustering, padding og negativ margin for Branding-seksjonen */
 }
 
 .branding-title {
-    margin-bottom: 20px;/
+    margin-bottom: 20px;
     font-size: 24px;
+    /* Stil for tittel i Branding-seksjonen med margin og fontstørrelse */
 }
-/* Golden underline for the title, adjust width as needed */
+
+/* Gullfarget understrekning for tittelen, juster bredde etter behov */
 .branding-title::after {
     content: '';
     display: block;
@@ -337,18 +368,20 @@ nav a.active {
     background-color: #e6bd43;
     margin: 0 auto;
     margin-top: 10px;
-    
+    /* Legger til en gullfarget linje under tittelen i Branding-seksjonen */
 }
+
 .branding-item {
     width: 100%;
     margin-bottom: 40px;
+    /* Stil for hver branding-element med full bredde og margin */
 }
 
 .branding-item img {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
-    
+    /* Stil for bilder i Branding-elementene med full bredde og automatisk høyde */
 }
 
 .branding-item p {
@@ -358,42 +391,46 @@ nav a.active {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
+    /* Stil for paragrafer i Branding-elementene med fet skrift og justert tekst */
 }
 
-/* Design seksjon */
-
+/* Design-seksjonen */
 .design {
     text-align: left;
     padding: 40px;
     margin-bottom: -60px;
+    /* Setter tekstjustering, padding og negativ margin for Design-seksjonen */
 }
 
 .design-title {
     margin-bottom: 20px;
     font-size: 24px;
+    /* Stil for tittel i Design-seksjonen med margin og fontstørrelse */
 }
-
 
 .design-title::after {
     content: '';
     display: block;
     width: 100%;
-    
     height: 3px;
     background-color: #e6bd43;
     margin: 0 auto;
     margin-top: 10px;
+    /* Legger til en gullfarget linje under tittelen i Design-seksjonen */
 }
 
 .designment-item {
     width: 100%;
     margin-bottom: 40px;
+    /* Stil for hvert design-element med full bredde og margin */
 }
 
+/* Stiler for Design-elementer */
 .design-item img {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
+    /* Stil for bilder i Design-elementer med full bredde og automatisk høyde */
 }
 
 .design-item p {
@@ -403,17 +440,22 @@ nav a.active {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
+    /* Stil for paragrafer i Design-elementer med fet skrift og justert tekst */
 }
-/* Development seksjon */
+
+/* Utvikling-seksjonen */
 .development {
     text-align: left;
     padding: 40px;
+    /* Setter tekstjustering og padding for Utvikling-seksjonen */
 }
 
 .development-title {
     margin-bottom: 20px;
     font-size: 24px;
+    /* Stil for tittel i Utvikling-seksjonen med margin og fontstørrelse */
 }
+
 .development-title::after {
     content: '';
     display: block;
@@ -422,17 +464,20 @@ nav a.active {
     background-color: #e6bd43;
     margin: 0 auto;
     margin-top: 10px;
+    /* Legger til en gullfarget linje under tittelen i Utvikling-seksjonen */
 }
 
 .development-item {
     width: 100%;
     margin-bottom: 40px;
+    /* Stil for hvert utviklingselement med full bredde og margin */
 }
 
 .development-item img {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
+    /* Stil for bilder i Utviklingselementer med full bredde og automatisk høyde */
 }
 
 .development-item p {
@@ -442,11 +487,12 @@ nav a.active {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
+    /* Stil for paragrafer i Utviklingselementer med fet skrift og justert tekst */
 }
 
-/* About seksjon styles */
+/* Stiler for Om-seksjonen */
 
-/* Banner seksjon Styles */
+/* Stiler for Banner-seksjonen i Om-seksjonen */
 .about-banner {
     background-image: url(../img/home/pen-4337521_1280.jpg);
     background-size: cover;
@@ -456,11 +502,13 @@ nav a.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* Setter bakgrunnsbilde, størrelse, padding, farge og flexbox-oppsett for banneret */
 }
 
-.about-banner{
+.about-banner {
     text-align: center;
     color: #000000;
+    /* Justerer tekst og farge i banneret */
 }
 
 .about-banner-content {
@@ -468,14 +516,17 @@ nav a.active {
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
+    /* Setter bakgrunnsfarge, padding, margin og kant-radius for innholdet i banneret */
 }
 
 .about-banner h1 {
     font-size: 1em;
     margin-bottom: 20px;
     font-weight: lighter;
+    /* Stil for overskrift i banneret med fontstørrelse, margin og fontvekt */
 }
 
+/* Stiler for overskrifter og paragrafer i Om-seksjonens banner */
 .about-banner h1,
 .about-banner h2,
 .about-banner p {
@@ -483,9 +534,10 @@ nav a.active {
     color: #000000;
     margin: 0 auto 20px;
     width: 60%;
+    /* Justerer tekstjustering, farge, margin og bredde for tekst i banneret */
 }
 
-/* Button styles */
+/* Knappstiler for Om-seksjonens banner */
 .about-banner .btn {
     background-color: #e6bd43;
     color: #000000;
@@ -496,21 +548,22 @@ nav a.active {
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.3s ease;
-
+    /* Setter stil for knappene i banneret, inkludert bakgrunnsfarge og overgangseffekt */
 }
 
-
-/* Our clients seksjon */
+/* Stiler for Våre kunder-seksjonen */
 .clients-section {
     background-color: #e6bd43;
     text-align: center;
     padding: 20px;
+    /* Setter bakgrunnsfarge, tekstjustering og padding for Våre kunder-seksjonen */
 }
 
 .clients-section h2 {
     color: #000;
     margin-bottom: 30px;
     font-size: large;
+    /* Stil for overskrift i Våre kunder-seksjonen med farge, margin og fontstørrelse */
 }
 
 .clients-logos {
@@ -518,6 +571,7 @@ nav a.active {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
+    /* Bruker flexbox for å vise kundelogos med mellomrom og omsluttende oppførsel */
 }
 
 .logo {
@@ -525,52 +579,65 @@ nav a.active {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    /* Stil for hver logo, med beregnet bredde og sentrert justering */
 }
 
 .center-logo {
     width: 50% - 40px;
     justify-content: center;
     display: flex;
+    /* Stil for sentrert logo, med beregnet bredde og justering */
 }
 
 .logo img {
     max-width: 100%;
     height: auto;
+    /* Stil for bilder i logoene, med maksimal bredde og automatisk høyde */
 }
 
-/* contact us seksjon for about.html */
+/* Kontakt oss-seksjonen for about.html */
 .contact-us,
 .contact-information {
     background-color: #f3f3f3;
     color: #000000;
     padding: 20px;
     text-align: left;
+    /* Setter bakgrunnsfarge, tekstfarge, padding og tekstjustering for kontaktinformasjonen */
 }
 
-.contact-us h2{
+.contact-us h2 {
     text-align: center;
     font-size: large;
     font-weight: bolder;
+    /* Stil for overskrift i Kontakt oss-seksjonen, med sentrert justering og fontstil */
 }
+
 .contact-us h2,
 .contact-information h3 {
     color: #000000;
     margin-bottom: 15px;
+    /* Stil for overskrifter i kontaktinformasjonen med farge og margin */
 }
 
 #contact-form label {
     display: block;
     margin-bottom: 5px;
+    /* Stil for etiketter i kontaktskjemaet, med blokkvisning og margin */
 }
+
 #message {
     height: 100px;
+    /* Setter høyde for meldingsfeltet i kontaktskjemaet */
 }
+
 #contact-form input,
 #contact-form textarea {
-    width: calc(100% - 20px); /*Justerer bredden på input-feltene */
+    width: calc(100% - 20px);
+    /* Justerer bredden på input-feltene */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ffffff;
+    /* Stil for input-felt og tekstområde i kontaktskjemaet, inkludert bredde, padding og kant */
 }
 
 #contact-form button.send-message {
@@ -580,42 +647,49 @@ nav a.active {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    /* Stil for send-knappen i kontaktskjemaet, med bakgrunnsfarge og tekstfarge */
 }
 
-.contact-information i{
+/* Stiler for kontaktinformasjonens ikoner */
+.contact-information i {
     margin-right: 10px;
+    /* Setter margin til høyre for ikonene i kontaktinformasjonen */
 }
+
 .contact-information p {
     margin-bottom: 10px;
     font-weight: 500;
+    /* Stil for paragrafer i kontaktinformasjonen med margin og fontvekt */
 }
 
-/* Google Maps Integrasjon*/
-
+/* Google Maps Integrasjon */
 .map-section iframe {
     width: 100%;
     height: 250px;
+    /* Stil for Google Maps-iframe, setter bredde og høyde */
 }
 
-/* Footer Section Styles */
+/* Stiler for Fotseksjonen */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px;
     position: relative;
+    /* Setter bakgrunnsfarge, tekstfarge, tekstjustering og padding for fotseksjonen */
 }
 
 footer p {
     margin: 10px 0;
     font-size: 0.9em;
+    /* Stil for paragrafer i fotseksjonen med margin og fontstørrelse */
 }
 
 footer a {
     margin: 0 10px;
     color: white;
     text-decoration: none;
-    
+    /* Stil for lenker i fotseksjonen, inkludert margin, farge og tekstdekorasjon */
 }
 
 footer .social-icons {
@@ -625,13 +699,15 @@ footer .social-icons {
     gap: 20px;
     list-style-type: none;
     padding: 0;
+    /* Stil for sosiale ikoner i fotseksjonen, inkludert fontstørrelse og flexbox-oppsett */
 }
 
 footer .social-icons li {
     display: inline;
+    /* Stil for listeelementer inneholdende sosiale ikoner */
 }
 
-/* Back to Top Button */
+/* Tilbake til toppen-knapp */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -644,62 +720,67 @@ footer .social-icons li {
     font-size: 24px;
     display: none;
     z-index: 1000;
+    /* Stil for Tilbake til toppen-knappen, inkludert posisjon, farge og skjulemekanisme */
 }
 
+/* Gjentatte stiler for Tjenester-seksjonen */
 .services {
     text-align: center;
     padding: 20px;
+    /* Setter tekstjustering og padding for Tjenester-seksjonen */
 }
 
 .services h2 {
     margin-bottom: 30px;
+    /* Stil for overskrift i Tjenester-seksjonen med margin */
 }
-
 
 .services article {
     margin-bottom: 20px;
-    
+    /* Stil for artikler i Tjenester-seksjonen med margin */
 }
 
-/* Medium screens: 2 columns for articles */
+/* Medieforespørsel for mellomstore skjermer: 2 kolonner for artikler */
 @media (min-width: 450px) {
     .services {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        
         grid-gap: 20px;
-        
+        /* Setter opp et grid med to kolonner og mellomrom for Tjenester-seksjonen */
     }
 
     .services h2 {
         grid-column: 1 / -1;
-        
+        /* Gjør at overskriften i Tjenester-seksjonen spenner over begge kolonnene */
     }
-    
+
+    /* Stilendringer for Nyhetsbrev-seksjonen på mellomstore skjermer */
     .newsletter {
         padding: 50px 0;
-        
+        /* Setter padding for Nyhetsbrev-seksjonen */
     }
-    
+
     .newsletter h2 {
         font-size: 2.5em;
+        /* Større fontstørrelse for overskriften i Nyhetsbrev-seksjonen */
     }
-    
+
     .newsletter form {
         flex-direction: row;
         align-items: center;
         justify-content: center;
         max-width: 400px;
         margin: 0 auto;
-        
+        /* Justerer layouten for skjemaet i Nyhetsbrev-seksjonen til rad, sentrerer og setter maks bredde */
     }
-    
+
     .newsletter input[type="email"] {
         flex-grow: 0;
         width: 60%;
         margin-right: 10px;
+        /* Setter bredde og margin for e-postfeltet i Nyhetsbrev-seksjonen */
     }
-    
+
     .newsletter button {
         flex-grow: 0;
         width: auto;
@@ -708,23 +789,46 @@ footer .social-icons li {
         color: #000;
         border: none;
         border-radius: 0;
+        /* Stil for knappen i Nyhetsbrev-seksjonen, inkludert farge, padding og kantstil */
     }
-    
 }
 
-/* Large screens: 3 columns with the last item centered */
-@media (min-width: 700px) and (max-width: 1023px){
+/* Medieforespørsel for store skjermer: 3 kolonner med det siste elementet sentrert */
+@media (min-width: 700px) and (max-width: 1023px) {
+
+    header,
+    main,
+    footer {
+        grid-column: 1 / -1;
+        /* Gjør at header, main og footer spenner over alle kolonner i gridet */
+    }
+
+    .nav {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px 40px;
+        /* Endrer navigasjonens flex-retning og justering for desktop-visning */
+    }
+
+    /* Stiler for navigasjonslogoen i desktop-visning */
+    .nav #logo {
+        margin-right: auto;
+        /* Setter auto-margin til høyre for logoen */
+    }
     .services {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        
-    }
-    .services article:last-child {
-    grid-column: 2 / span 1;
-    justify-self: center;
+        /* Setter opp et grid med tre kolonner og mellomrom for Tjenester-seksjonen */
     }
 
-    /* Footer seksjon styles for responsivt desktop design*/
+    .services article:last-child {
+        grid-column: 2 / span 1;
+        justify-self: center;
+        /* Sentrerer det siste artikkelelementet i Tjenester-seksjonen */
+    }
+
+    /* Footerseksjonens stiler for responsivt desktop design */
     footer {
         background-color: #000000;
         color: white;
@@ -732,59 +836,70 @@ footer .social-icons li {
         grid-template-columns: 1fr auto 1fr;
         align-items: center;
         padding: 20px;
-        gap: 10px; 
+        gap: 10px;
+        /* Setter opp et grid-layout og stiler for Footerseksjonen på desktop-størrelser */
     }
 
     footer p {
-        grid-column: 2 / 3; 
+        grid-column: 2 / 3;
         justify-self: center;
-        margin: 0; 
-        font-size: 0.9em; 
+        margin: 0;
+        font-size: 0.9em;
+        /* Plasserer og stiler paragrafen i footerseksjonen */
     }
 
     footer .social-icons {
         display: flex;
-        justify-content: center; 
+        justify-content: flex-end;
         list-style-type: none;
         padding: 0;
-        gap: 20px; 
+        gap: 20px;
         font-size: 1.5em;
-        grid-column: 3 / 4; 
+        grid-column: 3 / 4;
+        /* Stiler for sosiale ikoner i footerseksjonen på store skjermer */
     }
 
     footer .back-to-top {
-        justify-self: end; 
-        grid-column: 3 / 4; 
+        justify-self: end;
+        grid-column: 3 / 4;
+        /* Plasserer og stiler 'Tilbake til toppen'-knappen i footerseksjonens */
     }
-    
 }
 
-/* Media Query for Desktop */
+/* Medieforespørsel for Desktop */
 @media (min-width: 1024px) {
+
     /* Definerer et grid-container som inneholder header, main og footer */
     .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    
-    max-width: 1600px; 
-    margin: 0 auto; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1600px;
+        margin: 0 auto;
+        /* Setter opp et grid med tre kolonner for .grid-container */
     }
 
-    header, main, footer {
+    header,
+    main,
+    footer {
         grid-column: 1 / -1;
+        /* Gjør at header, main og footer spenner over alle kolonner i gridet */
     }
 
     .nav {
         flex-direction: row;
-        justify-content:flex-start;
+        justify-content: flex-start;
         align-items: center;
         padding: 20px 40px;
+        /* Endrer navigasjonens flex-retning og justering for desktop-visning */
     }
 
+   /* Stiler for navigasjonslogoen i desktop-visning */
     .nav #logo {
         margin-right: auto;
-        }
+        /* Setter auto-margin til høyre for logoen */
+    }
 
+    /* Stiler for hero-seksjonen i desktop-visning */
     .hero {
         position: relative;
         overflow: hidden;
@@ -792,13 +907,16 @@ footer .social-icons li {
         display: flex;
         justify-content: center;
         align-items: center;
+        /* Definerer hero-seksjonens posisjon, høyde og flexbox-oppsett */
     }
 
-    /* Hide the pseudo-element background image on desktop */
-    .hero::before {
+    /* Skjuler pseudo-elementet bakgrunnsbilde på desktop */
+    .index-page.hero::before {
         content: none; 
+        /* Fjerner innholdet i pseudo-elementet for hero-seksjonen */
     }
 
+    /* Stiler for hero-video i desktop-visning */
     #hero-video {
         display: block;
         position: absolute;
@@ -809,19 +927,21 @@ footer .social-icons li {
         object-fit: cover;
         z-index: -1;
         opacity: 0.5;
+        /* Plasserer og stiler hero-videoen, inkludert posisjon, størrelse og gjennomsiktighet */
     }
 
     .hero-content {
         position: relative;
         z-index: 1; 
+        /* Plasserer hero-innholdet over videoen */
     }
 
     .hero h1, .hero p, .hero .btn {
         color: #000000; 
+        /* Setter tekstfarge til svart for hero-seksjonens elementer */
     }
 
-    /* Endringer for style subheading seksjonen for desktop design */
-    
+    /* Endringer for å style subheading-seksjonen for desktop design */
     .subheading {
         display: flex;
         flex-direction: column;
@@ -832,6 +952,7 @@ footer .social-icons li {
         padding: 20px; 
         text-align: center; 
         margin: 10px;
+        /* Setter opp flexbox-oppsett, høyde og bakgrunnsfarge for subheading-seksjonen */
     }
 
     .subheading h2 {
@@ -840,7 +961,7 @@ footer .social-icons li {
         font-weight: bold;
         color: #000000;
         margin-bottom: 15px;
-        
+        /* Stil for overskrift i subheading-seksjonen, inkludert bredde, fontstørrelse og farge */
     }
 
     .subheading p {
@@ -848,9 +969,10 @@ footer .social-icons li {
         font-size: 16px;
         color: #000000;
         margin: 20px;
-        
+        /* Stil for paragraf i subheading-seksjonen, inkludert bredde, fontstørrelse og farge */
     }
-    /* Endringer for style about seksjonen for desktop design */
+
+    /* Endringer for å style Om-seksjonen for desktop design */
     .about {
         display: flex;   
         justify-content: space-between;   
@@ -858,49 +980,131 @@ footer .social-icons li {
         height: 400px;  
         background-color: #e6bd43;    
         padding: 20px;
+        /* Setter opp flexbox-oppsett, høyde og bakgrunnsfarge for Om-seksjonen */
     }
     
+    /* Stiler for bilde i Om-seksjonen på desktop */
     .about img {
         flex: 0 0 auto; 
         margin-right: 20px;
         max-width: 400px;
-        height: auto;   
+        height: auto;
+        /* Setter flex-oppførsel, margin, maks bredde og høyde for bildet */
     }
-    
-        .about-text-wrapper {     
+
+    /* Stiler for tekstomslagsboksen i Om-seksjonen */
+    .about-text-wrapper {     
         flex-grow: 1;
         align-items: flex-start;   
         text-align: left;
         padding: 0 20px;
+        /* Setter flex-grow, justering og padding for about-text-wrapper */
     }
-        
+
+    /* Stiler for overskrift i Om-seksjonen */
     .about h2 {
         font-size: 2em;
         text-align: left;
+        /* Setter fontstørrelse og tekstjustering for overskriften */
     }
-    
+
+    /* Stiler for paragrafer i tekstomslagsboksen */
     .about-text-wrapper p {
         align-items: left;
         margin-left: 0;
         width: 80%;
+        /* Setter justering, margin og bredde for paragrafene */
     }
-    
+
+    /* Stiler for knapper i Om-seksjonen */
     .about .btn {
         margin: 20px 0;
+        /* Setter margin for knappene */
     }
-    
+
+    /* Stiler for knappeomslagsboksen */
     .btn-wrapper {
         text-align: right;  
         padding-top: 20px;
+        /* Setter tekstjustering og padding for btn-wrapper*/
     }
 
-    /* Endringer for style services seksjonen for desktop design */
-    /* Extra large screens: 4 columns */
+    /* Endringer for å style Tjenester-seksjonen for desktop design */
+    /* Ekstra store skjermer: 4 kolonner */
     .services {
         grid-template-columns: repeat(4, 1fr);
+        /* Setter opp grid med fire kolonner for Tjenester-seksjonen */
     }
 
-    /* Footer seksjon styles for responsivt desktop design*/
+    /* Stiler for portfoli.html: */
+    /* Portfolio-seksjon */
+    .hero {
+        position: relative;
+        text-align: center;
+        color: #000000;
+        padding: 40px 20px;
+        /* Stil for hero-seksjonen, inkludert posisjon, tekstjustering, farge og padding */
+    }
+    
+    .branding-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; 
+    }
+
+    /* Stil for hvert branding-item */
+    .branding-container .branding-item {
+        flex: 1 1 400px;
+       /* Tillater vekst fra 400px, men også krymping */
+        max-width: 692px;
+        /* Maksimal bredde for hvert kort */
+    }
+
+    .branding-container .branding-item {
+        flex-basis: calc(50% - 20px); /* Tre kolonner */
+        /* max-width forblir 692px */
+    }
+
+    .branding-container .branding-item:nth-child(4), 
+    .branding-container .branding-item:nth-child(4) ~ .branding-item {
+        flex-basis: 100%; /* Full bredde for det fjerde kortet */
+    }
+
+    /* Stil for design-container */
+    .design-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; 
+    }
+
+    /* Stil for hvert design-item */
+    .design-container .design-item {
+        flex: 1 1 400px; /* Tillater vekst fra 400px, men også krymping */
+        max-width: 692px; /* Maksimal bredde for hvert kort */
+        
+    }
+
+    .design-container .design-item {
+        flex-basis: calc(50% - 20px); /* To kolonner */
+    }
+
+    /* Stil for development-container */
+    .development-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    /* Stil for hvert development-item */
+    .development-container .development-item {
+        flex: 1 1 400px; /* Tillater vekst fra 400px, men også krymping */
+        max-width: 500px; /* Maksimal bredde for hvert kort */
+    }
+
+    .development-container .development-item {
+        flex-basis: calc(50% - 20px); /* To kolonner */
+    }
+    /* footerseksjonens stiler for responsivt desktop design */
     footer {
         background-color: #000000;
         color: white;
@@ -909,28 +1113,46 @@ footer .social-icons li {
         align-items: center;
         padding: 20px;
         gap: 10px; 
+        /* Setter opp grid-layout og styler for footerseksjonen */
     }
 
+    /* Stiler for paragraf i footerseksjonen */
     footer p {
         grid-column: 2 / 3; 
         justify-self: center;
         margin: 0; 
         font-size: 0.9em; 
+        /* Plasserer og styler paragrafen i footerseksjonen */
     }
 
+    /* Styler for sosiale ikoner i footerseksjonen */
     footer .social-icons {
         display: flex;
-        justify-content: center; 
+        justify-content: flex-end; 
         list-style-type: none;
         padding: 0;
         gap: 20px; 
         font-size: 1.5em;
         grid-column: 3 / 4;
+        /* Setter opp og styler sosiale ikoner i footerseksjonen */
+    }
 
+    /* Styler for 'Tilbake til toppen'-knappen i footerseksjonen */
     footer .back-to-top {
         justify-self: end; 
-        grid-column: 3 / 4; 
-    } 
-    
+        grid-column: 3 / 4;
+        /* Plasserer og styler 'Tilbake til toppen'-knappen */
+    }
     
 }   
+
+/* Media query for viewport fra 1400px og større - tre kolonner */
+@media (min-width: 1350px) {
+    .branding-container .branding-item {
+        flex-basis: calc(33.333% - 20px); /* Tre kolonner */
+    }
+
+    .design-container .design-item {
+        flex-basis: calc(33.333% - 20px); /* Tre kolonner */
+    }
+}    
