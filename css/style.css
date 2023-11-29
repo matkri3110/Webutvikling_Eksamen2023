@@ -143,7 +143,6 @@ nav a.active {
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s ease;
     /* Stil for knappene i hero-seksjonen, inkludert bakgrunnsfarge og overgangseffekt */
 }
 
@@ -337,10 +336,12 @@ nav a.active {
 }
 
 /* Stiler for knapper i Jobbkategorier-seksjonen */
-.job-categories button {
+.job-categories a {
     padding: 10px 20px;
     border: 1px solid black;
     background: none;
+    color: black;
+    text-decoration: none;
     cursor: pointer;
     /* Stil for knapper i jobbkategorier med padding, kant og peker som peker */
 }
