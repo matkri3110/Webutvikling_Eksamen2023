@@ -794,7 +794,7 @@ footer .social-icons li {
     }
 }
 
-/* Medieforespørsel for store skjermer: 3 kolonner med det siste elementet sentrert */
+/* Medieforespørsel for store skjermer mellom 700-1023px: */ 
 @media (min-width: 700px) and (max-width: 1023px) {
 
     header,
@@ -828,7 +828,91 @@ footer .social-icons li {
         justify-self: center;
         /* Sentrerer det siste artikkelelementet i Tjenester-seksjonen */
     }
+    /* Stiler for våre kunder seksjon */
+    .clients-logos {
+        justify-content: center; /* Sentreree logoene horisontalt */
+        flex-wrap: wrap; /* Tillater at elementene omsluttes på tvers av flere linjer */
+    }
 
+    .logo {
+        /* Setter maks bredde og justerer flex-basis for å passe 3 kolonner */
+        max-width: 180px; /* Maks bredde lik den for mindre skjermer for å unngå for stor vekst */
+        margin: 0 10px; /* Holder en konsistent margin */
+        flex: 1 1 calc(33.333% - 20px); /* Tillater krymping men ikke vekst, tre elementer per rad */
+    }
+
+    .logo img {
+        max-width: 100%; /* Sørger for at bildet fyller logo-diven */
+        height: auto; /* Bevarer aspektforholdet til bildet */
+    }
+
+     /* Grunnleggende stiler for kontaktdelen på about.html siden */
+    .contact-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* To like kolonner for større skjermer */
+        gap: 40px;
+        /* Mellomrom mellom kolonnene */
+        background-color: #f3f3f3;
+        color: #000000;
+        padding: 40px;
+        /* Polstring rundt hele seksjonen */
+        grid-template-areas:
+            "contact-header contact-header"
+            "contact-form contact-info";
+    }
+
+    /* Stiler for å plassere 'Kontakt oss' overskriften over alle grid-elementer */
+    .contact-section>h2 {
+        grid-area: contact-header;
+        /* Plasserer h2 i definert område */
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    /* Stiler for kontaktskjemaet */
+    .contact-us {
+        grid-area: contact-form;
+        /* Plasserer kontaktskjemaet i definert område */
+        padding: 20px;
+        text-align: left;
+    }
+
+    /* Stiler for kontaktinformasjon */
+    .contact-information {
+        grid-area: contact-info;
+        /* Plasserer kontaktinformasjon i definert område */
+        padding: 20px;
+        text-align: left;
+    }
+
+    /* Stiler for kontaktskjemaet og dets elementer */
+    #contact-form label,
+    #contact-form input,
+    #contact-form textarea,
+    #contact-form button {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #contact-form button.send-message {
+        background-color: #e6bd43;
+        color: #000000;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Stiler for informasjonsteksten */
+    .contact-information i {
+        margin-right: 10px;
+    }
+
+    .contact-information p {
+        margin-bottom: 10px;
+    }
     /* Footerseksjonens stiler for responsivt desktop design */
     footer {
         background-color: #000000;
@@ -1105,6 +1189,157 @@ footer .social-icons li {
     .development-container .development-item {
         flex-basis: calc(50% - 20px); /* To kolonner */
     }
+
+
+        /* Stiler for Våre kunder-seksjonen */
+    .clients-section {
+        background-color: #e6bd43;
+        text-align: center;
+        padding: 20px 0; /* Øk padding for å gi mer rom på desktop */
+    }
+
+    .clients-section h2 {
+        color: #000;
+        margin-bottom: 50px; /* Øk bunntekst for bedre visuell separasjon */
+        font-size: 2em; /* Øk størrelsen på overskriften for desktop */
+    }
+
+    .clients-logos {
+        display: flex;
+        justify-content: center; /* Sentrer logoene horisontalt */
+        align-items: center; /* Sentrer logoene vertikalt */
+        gap: 30px; /* Gi litt mer plass mellom logoene */
+        flex-wrap: wrap; /* Tillat ombryting hvis nødvendig */
+    }
+
+    .logo {
+        flex: 0 1 auto; /* Ikke tillat logos å vokse, men tillat dem å krympe hvis nødvendig */
+        max-width: 200px; /* Maksimal bredde for hver logo */
+        margin: 0 10px; /* Gi litt plass på hver side av logoene */
+    }
+
+    .logo img {
+        max-width: 100%; /* Sørger for at bildet er responsivt og tilpasser seg til .logo-bredde */
+        height: auto; /* Bevarer aspektforholdet til bildet */
+    }
+
+        /* Stiler for Banner-seksjonen i Om-seksjonen for desktop */
+    .about-banner {
+        background-image: url('../img/home/pen-4337521_1280.jpg'); /* Kontroller riktig bildesti */
+        background-size: cover;
+        background-position: center; /* Sentrerer bakgrunnsbildet */
+        color: #fff;
+        position: relative; /* For posisjonering av innholdsdiv */
+        display: flex;
+        justify-content: flex-end; /* Justerer innholdsdiv til høyre side */
+        align-items: center; /* Sentrerer innhold vertikalt */
+        padding: 80px 40px; /* Tilpass padding som nødvendig */
+        height: 400px; /* Sett en høyde for banneret */
+    }
+
+    .about-banner-content {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        width: 50%; /* Innholdsdiv dekker halvparten av bredden */
+        transform: translateX(0%); /* Ingen horisontal transformasjon nødvendig */
+        margin-left: auto;
+    }
+
+    .about-banner h1, .about-banner h2, .about-banner p {
+        color: #000000;
+        /* Tilpass tekstfarger og marger som nødvendig */
+    }
+
+    /* Knappstiler for Om-seksjonens banner */
+    .about-banner .btn {
+        background-color: #e6bd43;
+        color: #000;
+        padding: 10px 20px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        align-items: center;
+        /* Resten av knappstilen som tidligere definert */
+    }
+
+    /* Grunnleggende stiler for kontaktdelen på about.html siden */
+    .contact-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* To like kolonner for større skjermer */
+        gap: 40px;
+        /* Mellomrom mellom kolonnene */
+        background-color: #f3f3f3;
+        color: #000000;
+        padding: 40px;
+        /* Polstring rundt hele seksjonen */
+        grid-template-areas:
+            "contact-header contact-header"
+            "contact-form contact-info";
+    }
+
+    /* Stiler for å plassere 'Kontakt oss' overskriften over alle grid-elementer */
+    .contact-section>h2 {
+        grid-area: contact-header;
+        /* Plasserer h2 i definert område */
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    /* Stiler for kontaktskjemaet */
+    .contact-us {
+        grid-area: contact-form;
+        /* Plasserer kontaktskjemaet i definert område */
+        padding: 20px;
+        text-align: left;
+    }
+
+    /* Stiler for kontaktinformasjon */
+    .contact-information {
+        grid-area: contact-info;
+        /* Plasserer kontaktinformasjon i definert område */
+        padding: 20px;
+        text-align: left;
+    }
+
+    /* Stiler for kontaktskjemaet og dets elementer */
+    #contact-form label,
+    #contact-form input,
+    #contact-form textarea,
+    #contact-form button {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #contact-form button.send-message {
+        background-color: #e6bd43;
+        color: #000000;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Stiler for informasjonsteksten */
+    .contact-information i {
+        margin-right: 10px;
+    }
+
+    .contact-information p {
+        margin-bottom: 10px;
+    }
+
+/* Responsivt design for mindre skjermer */
+@media (max-width: 768px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+        /* Enkel kolonne for mindre skjermer */
+        padding: 20px;
+    }
+
     /* footerseksjonens stiler for responsivt desktop design */
     footer {
         background-color: #000000;
