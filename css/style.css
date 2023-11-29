@@ -22,7 +22,7 @@ footer {
     /* Plasserer header, main og footer til å spenne over hele bredden av grid-kolonnen */
 }
 
-/* Base styles for header */
+/* Generelle styles for header */
 header {
     background: #ffffff;
     color: #fff;
@@ -36,7 +36,7 @@ header {
     /* Stil for logo-bildet med fast bredde og automatisk høyde */
 }
 
-/* Styles for the navigation bar */
+/* Styles for navigasjonsbaren*/
 nav {
     display: flex;
     justify-content: space-around;
@@ -46,7 +46,7 @@ nav {
     /* Stiler for navigasjonsbaren, inkludert flexbox-layout */
 }
 
-/* Style for navigation links */
+/* Style for navigasjonslinker */
 nav a {
     color: #000000;
     text-decoration: none;
@@ -56,7 +56,7 @@ nav a {
     /* Stil for navigasjonslenker, inkludert farge, tekstdekorasjon, fontvekt, padding og overgangseffekt */
 }
 
-/* Special style for the contact button */
+/* Style for contact knapp i nav.a */
 nav a.contact-button {
     background-color: #e6bd43;
     color: #000000;
@@ -65,15 +65,7 @@ nav a.contact-button {
     /* Spesiell stil for kontakt-knappen med bakgrunnsfarge, tekstfarge, kant-radius og fontvekt */
 }
 
-/* Hover effect for the contact button */
-nav a.contact-button:hover {
-    background-color: #000000;
-    color: #FFD700;
-    border: 2px solid #FFD700;
-    /* Hover-effekt for kontakt-knappen med endringer i bakgrunns- og tekstfarge samt kantstil */
-}
-
-/* Navigation link active state styles */
+/* Navigasjonslink active state styles */
 nav a.active {
     font-weight: bold;
     border-bottom: 3px solid #e6bd43;
@@ -81,7 +73,7 @@ nav a.active {
     /* Stil for aktive navigasjonslenker med fontvekt og gullfarget understrekning */
 }
 
-/* Hero Section Styles */
+/* Hero seksjon styles */
 
 #hero-video {
     display: none;
@@ -1331,8 +1323,69 @@ footer .social-icons li {
         margin-bottom: 10px;
     }
 
+    /* Hover effekt for contact button */
+    nav a.contact-button:hover {
+        background-color: #000000;
+        color: #FFD700;
+        /* Hover-effekt for kontakt-knappen med endringer i bakgrunns- og tekstfarge */
+    }
+    /* Hover animasjon på button */
+    .btn:hover {
+        background-color: black; 
+        color: #FFD700; 
+        
+    }
+
+    /* Hover for de ulike item-kortene */
+    .branding-item, .design-item, .development-item {
+        transition: transform 0.3s ease-in-out; 
+    }
+
+    /* Hover for de uilke item-kortene, hvor mye de skal vokse med */
+    .branding-item:hover, .design-item:hover, .development-item:hover {
+        transform: scale(1.08); 
+        
+    }
+     /* Footerseksjonens stiler for responsivt desktop design */
+    footer {
+        background-color: #000000;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 20px;
+        gap: 10px;
+        /* Setter opp et grid-layout og stiler for Footerseksjonen på desktop-størrelser */
+    }
+
+    footer p {
+        grid-column: 2 / 3;
+        justify-self: center;
+        margin: 0;
+        font-size: 0.9em;
+        /* Plasserer og stiler paragrafen i footerseksjonen */
+    }
+
+    footer .social-icons {
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        padding: 0;
+        gap: 20px;
+        font-size: 1.5em;
+        grid-column: 3 / 4;
+        /* Stiler for sosiale ikoner i footerseksjonen på store skjermer */
+    }
+
+    footer .back-to-top {
+        justify-self: end;
+        grid-column: 3 / 4;
+        /* Plasserer og stiler 'Tilbake til toppen'-knappen i footerseksjonens */
+    }
+
 /* Responsivt design for mindre skjermer */
 @media (max-width: 768px) {
+    
     .contact-section {
         grid-template-columns: 1fr;
         /* Enkel kolonne for mindre skjermer */
