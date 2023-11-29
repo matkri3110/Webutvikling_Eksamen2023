@@ -571,8 +571,7 @@ nav a.active {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
-    /* Bruker flexbox for å vise kundelogos med mellomrom og omsluttende oppførsel */
+    gap: 20px; /* Bruker flexbox for å vise kundelogoer med mellomrom og omsluttende oppførsel */
 }
 
 .logo {
@@ -597,7 +596,7 @@ nav a.active {
 }
 
 /* Kontakt oss-seksjonen for about.html */
-.contact-us,
+.contact-section,
 .contact-information {
     background-color: #f3f3f3;
     color: #000000;
@@ -606,7 +605,7 @@ nav a.active {
     /* Setter bakgrunnsfarge, tekstfarge, padding og tekstjustering for kontaktinformasjonen */
 }
 
-.contact-us h2 {
+.contact-section h2 {
     text-align: center;
     font-size: large;
     font-weight: bolder;
@@ -670,7 +669,7 @@ nav a.active {
     /* Stil for Google Maps-iframe, setter bredde og høyde */
 }
 
-/* Stiler for Fotseksjonen */
+/* Stiler for Footerseksjonen */
 footer {
     background-color: #333;
     color: white;
@@ -996,7 +995,7 @@ footer .social-icons li {
     }
 
     /* Skjuler pseudo-elementet bakgrunnsbilde på desktop */
-    .index-page.hero::before {
+    .index-page .hero::before {
         content: none; 
         /* Fjerner innholdet i pseudo-elementet for hero-seksjonen */
     }
