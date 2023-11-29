@@ -39,11 +39,11 @@
     </header>
     <!-- "Main" seksjonen-->
     <main>
-        <section class="about-banner">
+        <section itemscope itemtype="http://schema.org/AboutPage" class="about-banner">
             <div class="about-banner-content">
                 <div class="about-content-box">
-                    <h1>Company name</h1>
-                    <h2>About our company</h2>
+                    <h1 itemprop="headline">Company name</h1>
+                    <h2 itemprop="description">About our company</h2>
                     <p> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                         aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
@@ -55,12 +55,12 @@
             </div>    
         </section>
         <!-- Services seksjon -->
-        <section class="services">
-            <h2>Our Services</h2>
+        <section class="services" itemscope itemtype="http://schema.org/Service">
+            <h2 itemprop="serviceType">Our Services</h2>
             <article>
                 <i class="fa-solid fa-people-group"></i>
-                <h3>Branding</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+                <h3 itemprop="name">Branding</h3>
+                <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
             </article>
             <article>
                 <i class="fa-solid fa-cloud-arrow-up"></i>
@@ -81,12 +81,12 @@
         <section class="clients-section">
             <h2>Some of our clients</h2>
             <div class="clients-logos">
-                <img src="img/logo1.png" alt="Client Logo 1" class="logo">
+                <img src="img/logo1.png" alt="Client Logo 1" class="logo" itemprop="logo" itemscope itemtype="http://schema.org/Organization">
                 <img src="img/logo2.png" alt="Client Logo 2" class="logo">
                 <img src="img/logo3.png" alt="Client Logo 3" class="logo center-logo">
             </div>
         </section>
-        <section class="contact-section">
+        <section class="contact-section" itemscope itemtype="http://schema.org/ContactPage">
             <h2>Contact us</h2>
             <section class="contact-us" id="contact-us">
                 <h3>Send us a message</h3>
